@@ -1,0 +1,106 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+
+img {
+    width: 100%;
+}
+
+
+body {
+    background-color: burlywood;
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr)  1fr;
+    grid-template-areas: 
+    "sidebar main-sec";
+}
+
+
+
+
+.card-cont {
+    height: 210px;
+    width: 160px;
+    background-color: crimson;
+    margin: .5rem;
+    border-radius: 12px ;
+    
+}
+
+
+
+
+
+
+.sidebar {
+    background-color: darkblue;
+    position: fixed;
+    padding-top: 3.7rem;
+    padding-right: 3.9rem;
+    height: 100vh;
+    grid-area: sidebar;
+}
+
+.main-sec {
+    background-color: cornflowerblue;
+    grid-area: main-sec;
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: 
+    "nav"
+    "main-sec-c";
+    
+}
+
+.main-sec .nav {
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: cadetblue;
+    grid-area: nav;
+    
+}
+
+.main-sec .main-sec-c {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 60px;
+}
+
+
+
+
+
+
+
+
+
+/* .nav {
+    background-color: purple;
+    position: sticky;
+    grid-column: nav;
+}
+
+
+.sidebar {
+    background-color: navy;
+    grid-column: sidebar;
+    height: 85vh;
+    position: sticky;
+    align-self: start;
+    
+}
+
+.main-sec {
+    background-color: royalblue;
+    grid-column: main-sec;
+    margin: a auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: space-around;
+    justify-items: center;
+} */
